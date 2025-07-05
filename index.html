@@ -28,7 +28,7 @@
 
         <!--LESSON 2-->
         <div class="lesson">
-            <h2>Lesson 2: Variables (Text Storage)</h2>
+            <h3>Lesson 2: Variables (Text Storage)</h3>
 
             <h2 id="heading2">Text Will Change</h2>
             <p id="text2">More Text Here</p>
@@ -42,6 +42,23 @@
 
                     document.getElementById("heading2").innerHTML = message1;
                     document.getElementById("text2").innerHTML = message2 + `  `+ message3;
+                }
+            </script>
+        </div>
+
+        <!--LESSON 3-->
+        <div class="lesson">
+            <h3>Lesson 3: Variables (Numbers)</h3>
+
+            <p id="math">Math Equation will show up here</p>
+            <button onclick="lesson3()">Do Math</button>
+
+            <script>
+                function lesson3() {
+                    var num1 = 7;
+                    var num2 = 10;
+                    
+                    document.getElementById("math").innerHTML = num1 + " x " + num2 + "  =  " + (num1 * num2); 
                 }
             </script>
         </div>
