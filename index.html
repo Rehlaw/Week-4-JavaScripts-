@@ -115,7 +115,7 @@
         <!--LESSON 7-->    
         <div class="lesson">
             <h3>Lesson 7: Function Parameters</h3>
-            <p><strong>Concept</strong>: Passing data into functions</p>
+            <p><strong>Concept:</strong> Passing data into functions</p>
 
             <button onclick="addNumbers(18, 7)">Add 18 + 7</button>
             <button onclick="addNumbers(25, 18)">Add 25 + 18</button>
@@ -129,5 +129,24 @@
             </script>
         </div>
 
+        <!--LESSON 8-->
+        <div class="lesson">
+            <h3>Lesson 8: Function Return</h3>
+            <p><strong>Concept:</strong> Function Returning values to be used elsewhere</p>
+
+            <button onclick="runlesson8()">Calculate and Display Results</button>
+            <div class="output" id="addition8">Result will show here.</div>
+
+            <script>
+                function runlesson8() {
+                    document.getElementById("addition8").innerHTML = "10 + 7 = " + addNumbersReturn(10, 7);  
+                }
+
+                function addNumbersReturn(num1, num2) {
+                    return num1 + num2;
+                }
+            </script>
+        </div>
+        
     </body>
 </html>
