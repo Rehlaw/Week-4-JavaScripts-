@@ -58,10 +58,31 @@
                     var num1 = 7;
                     var num2 = 10;
                     
-                    document.getElementById("math").innerHTML = num1 + " x " + num2 + "  =  " + (num1 * num2); 
+                     document.getElementById("math").innerHTML = num1 + " x " + num2 + "  =  " + (num1 * num2); 
                 }
             </script>
         </div>
 
+        <!--LESSON 4-->
+        <div class="lesson">
+            <h3>Lesson 4: If/Else Decisions (Conditionals)</h3>
+
+            <input type="password" id="password" placeholder="Try: 007">
+            <button onclick="lesson4()">Check Password</button>
+            <div class="result" id="result4">Enter Password and Click</div>
+
+            <script>
+                function lesson4() {
+                    var userPassword = document.getElementById("password").value;
+
+                    if (userPassword == "007") {
+                        document.getElementById("result4").innerHTML = "correct password. You are now logged in!";
+                    } else {
+                        document.getElementById("result4").innerHTML = "wrong password! please try again.";
+                    }
+                }
+            </script>
+        </div>
+        
     </body>
 </html>
