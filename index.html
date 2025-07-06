@@ -308,6 +308,36 @@
                 }
             </script>
         </div>
-        
+
+        <!--LESSON 14-->
+        <div class="lesson">
+            <h3>Lesson 14: Numbers and Strings Part 2 - Coverting Text to Numbers.</h3>
+            <p><strong>Concerpt:</strong>Converting String Input to Numbers for Calculations</p>
+
+            <input type="text" id="textNumber1" placeholder="Enter First Number" value="10">
+            <input type="text" id="textNumber2" placeholder="Enter Second Number" value="5">
+
+            <button onclick="convertAndAdd()">Convert and Add</button>
+            <div class="output" id="conversionOutput">Enter 
+                Numbers and click to see Conversion in action</div>
+            
+            <script>
+                function convertAndAdd() {
+                    var input1 = document.getElementById("textNumber1").value;
+                    var input2 = document.getElementById("textNumber2").value;
+
+                    //without conversion (String Concatenation)
+                    var stringResult = input1 + input2;
+
+                    //with conversion (Number Addition)
+                    var numberResult = parseInt(input1) + parseInt(input2);
+
+                    document.getElementById("conversionOutput").innerHTML = 
+                    "Without Conversion: " + stringResult + "<br>" +
+                    "With Conversion: " + numberResult;
+                }
+            </script>
+        </div>
+
     </body>
 </html>
