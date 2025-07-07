@@ -151,7 +151,7 @@
         <!--LESSON 9-->
         <div class="lesson">
             <h3>Lesson 9: Variable Scopes</h3>
-            <p><strong>Concept:</strong>Understanding where variables can be used</p>
+            <p><strong>Concept:</strong> Understanding where variables can be used</p>
 
             <button onclick="demonstrateScope()">Demonstrate Variable Scope</button>
             <button onclick="demonstratelocalScope()">Demonstrate Local Scope</button>
@@ -243,7 +243,7 @@
         <!--LESSON 12-->
         <div class="lesson">
             <h3>Lesson 12: The SWITCH statement</h3>
-            <p><strong>Concept:</strong>Using SWITCH statements for Multiple conditions</p>
+            <p><strong>Concept:</strong> Using SWITCH statements for Multiple conditions</p>
 
             <label for="weather12">Select Weather</label>
             
@@ -289,7 +289,7 @@
         <!--LESSON 13-->
         <div class="lesson">
             <h3>Lesson 13: Numbers and Strings Part 1</h3>
-            <p><strong>Concerpt:</strong>Understanding how JavaScripts habdles Text vs Numbers</p>
+            <p><strong>Concept:</strong> Understanding how JavaScripts habdles Text vs Numbers</p>
 
             <button onclick="demonstrateStringNumber()">Show String vs Number</button>
             <div class="output" id="stringnumberOutput">Click to see the difference between Strings and Numbers</div>
@@ -312,7 +312,7 @@
         <!--LESSON 14-->
         <div class="lesson">
             <h3>Lesson 14: Numbers and Strings Part 2 - Coverting Text to Numbers.</h3>
-            <p><strong>Concerpt:</strong>Converting String Input to Numbers for Calculations</p>
+            <p><strong>Concept:</strong> Converting String Input to Numbers for Calculations</p>
 
             <input type="text" id="textNumber1" placeholder="Enter First Number" value="10">
             <input type="text" id="textNumber2" placeholder="Enter Second Number" value="5">
@@ -335,6 +335,37 @@
                     document.getElementById("conversionOutput").innerHTML = 
                     "Without Conversion: " + stringResult + "<br>" +
                     "With Conversion: " + numberResult;
+                }
+            </script>
+        </div>
+
+        <!--LESSON 15-->
+        <div class="lesson">
+            <h3>Lesson 15: Numbers and Strings Part 3 - Avoiding Conversion Errors</h3>
+            <p><strong>Concept:</strong> Handling Conversion Errors and Invalid input</p>
+
+            <input type="text" id="safeInput1" placeholder="Enter First Number">
+            <input type="text" id="safeInput2" placeholder="Enter Second Number">
+            <button onclick="safeConvertAndAdd()">Safe Conversion and Add</button>
+            <div class="output" id="safeOutput">Try Entering both Numbers and Non-numbers for Error Handling</div>
+            
+            <script>
+                function safeConvertAndAdd() {
+                    var input1 = document.getElementById("safeInput1").value;
+                    var input2 = document.getElementById("safeInput2").value;
+
+                    var num1 = parseInt(input1);
+                    var num2 = parseInt(input2);
+
+                    if (isNaN(num1) || isNaN(num2)) {
+                        document.getElementById("safeOutput").innerHTML = 
+                            "Error: Please Enter Valid Numbers Only!<br>" + 
+                            "Input 1: '" + input1 + "' → " + (isNaN(num1) ? "Invalid" : "Valid") + "<br>" + 
+                            "Input 2: '" + input2 + "' → " + (isNaN(num2) ? "Invalid" : "Valid");
+                    } else {
+                        document.getElementById("safeOutput").innerHTML = 
+                            "Success! " + num1 + " + " + num2 + " = " + (num1 + num2)
+                    }
                 }
             </script>
         </div>
